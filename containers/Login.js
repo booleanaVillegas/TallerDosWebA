@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, ToastAndroid, Text } from 'react-native';
+import { View, StyleSheet, ToastAndroid, Text, Image } from 'react-native';
 import { FormInput, FormLabel, Button } from 'react-native-elements';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
@@ -8,7 +8,7 @@ import { stores } from '../stores';
 
 @observer export class Login extends React.Component {
   @observable credenciales = {
-    correo: 'test@gmail.com',
+    correo: 'j@j.com',
     contra: '123456',
   };
 
@@ -25,14 +25,18 @@ import { stores } from '../stores';
   render() {
     return (
       <View style={styles.container}>
-        <FormLabel>Correo</FormLabel>
+          <Image
+          style={{width: 250, height: 250}}
+          source={{uri: 'https://static.thenounproject.com/png/632343-200.png'}}
+        />
+                 <FormLabel  style={styles.colorNegro}>Correo</FormLabel>
         <FormInput
           onChangeText={v => (this.credenciales.correo = v)}
           value={this.credenciales.correo}
           placeholder="tu correo electrónico"
         />
 
-        <FormLabel>Contraseña</FormLabel>
+        <FormLabel style={styles.colorNegro}>Contraseña</FormLabel>
         <FormInput
           onChangeText={v => (this.credenciales.contra = v)}
           value={this.credenciales.contra}
@@ -47,7 +51,6 @@ import { stores } from '../stores';
           onPress={this.onSubmit}
         />
 
-        <Text>{stores.auth.user ? stores.auth.user.uid : 'No has iniciado sesión.'}</Text>
 
         {stores.auth.error && <Text>{stores.auth.error}</Text>}
       </View>
@@ -58,9 +61,16 @@ import { stores } from '../stores';
 const styles = StyleSheet.create({
   container: {
     marginTop: 30,
+    backgroundColor: '#42d7f4',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   button: {
-    backgroundColor: 'violet',
+    backgroundColor: 'black',
     marginTop: 20,
   },
+  colorNegro: {
+    color: 'black'
+  }
 });

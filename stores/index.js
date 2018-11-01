@@ -4,12 +4,12 @@ import { AuthStore } from './AuthStore';
 import { MensajesStore } from './MensajesStore';
 
 if(!firebase.apps.length) firebase.initializeApp({
-  apiKey: "AIzaSyDpWz2i2PVoN0WedM1hzumnd5_P3Kmdk4c",
-  authDomain: "web-adv-test.firebaseapp.com",
-  databaseURL: "https://web-adv-test.firebaseio.com",
-  projectId: "web-adv-test",
-  storageBucket: "web-adv-test.appspot.com",
-  messagingSenderId: "637314218364"
+  apiKey: "AIzaSyCFaJ0lVGBdOZ09iV0LIdisQk16nUN0PtE",
+  authDomain: "minijuegos-49b4d.firebaseapp.com",
+  databaseURL: "https://minijuegos-49b4d.firebaseio.com",
+  projectId: "minijuegos-49b4d",
+  storageBucket: "minijuegos-49b4d.appspot.com",
+  messagingSenderId: "880560047544"
 });
 
 export const stores = {
