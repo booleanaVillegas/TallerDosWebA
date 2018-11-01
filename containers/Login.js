@@ -29,14 +29,14 @@ import { stores } from '../stores';
           style={{width: 250, height: 250}}
           source={{uri: 'https://static.thenounproject.com/png/632343-200.png'}}
         />
-                 <FormLabel  style={styles.colorNegro}>Correo</FormLabel>
+                 <FormLabel  labelStyle={styles.colorNegro}>Correo</FormLabel>
         <FormInput
           onChangeText={v => (this.credenciales.correo = v)}
           value={this.credenciales.correo}
           placeholder="tu correo electrónico"
         />
 
-        <FormLabel style={styles.colorNegro}>Contraseña</FormLabel>
+        <FormLabel labelStyle={styles.colorNegro}>Contraseña</FormLabel>
         <FormInput
           onChangeText={v => (this.credenciales.contra = v)}
           value={this.credenciales.contra}
@@ -46,7 +46,7 @@ import { stores } from '../stores';
 
         <Button
           buttonStyle={styles.button}
-          title="Iniciar Sesion"
+          title="Iniciar Sesión"
           large
           onPress={this.onSubmit}
         />
@@ -60,15 +60,16 @@ import { stores } from '../stores';
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 30,
     backgroundColor: '#42d7f4',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    height: '100%'
   },
   button: {
     backgroundColor: 'black',
     marginTop: 20,
+
   },
   colorNegro: {
     color: 'black'
